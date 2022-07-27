@@ -26,6 +26,7 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script>
 	<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
    <!-- favicons
 	================================================== -->
@@ -45,8 +46,8 @@
 
    		<div class="top-bar">
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
-	   		<div class="logo">
-		         <a href="index.html">Test</a>
+	   		<div id="logo">
+
 		    </div>		      
 		   	<nav id="main-nav-wrap">
 					<ul class="main-navigation">
@@ -73,8 +74,19 @@
    			<div class="col-twelve">
 
 	   			<h5>Hello, World.</h5>
-	   			<h1>I'm Cal Nightingale.</h1>
-
+				<span class="title" id="typed"></span>
+				<div id="typed-strings">
+					<p>I'm Cal Nightingale</p>
+				</div>
+				<script>
+					var typed = new Typed('#typed', {
+						stringsElement: '#typed-strings',
+						typeSpeed: 100,
+						startDelay: 1000,
+						autoInsertCss: false
+					});
+				</script>
+	   			<br>
 	   			<p class="intro-position">
 	   				<span>Software Developer</span>
 	   				<span>Data Engineer</span> 
@@ -106,6 +118,8 @@
 
    			<h5>About</h5>
    			<h1>Let me introduce myself.</h1>
+
+
 
    			<div class="intro-info">
 
@@ -199,7 +213,7 @@
 
    			<h5>Resume</h5>
    			<h1>More of my credentials.</h1>
-
+			
    		</div>
 		    <!-- Resume -->
 				<div id="adobe-dc-view" align="center" style="width: 100%;"></div>
@@ -234,6 +248,8 @@
 
    		</div> 
    	</div> <!-- /section-intro -->
+
+
 
    	<div class="row contact-info">
 
