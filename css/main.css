@@ -1294,7 +1294,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url(../images/pittscore.jpg) no-repeat 0% 70%;
+	background: #151515 url(../images/pittscore.jpg) no-repeat 50% 70%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -1438,7 +1438,13 @@ header .logo a {
  * Intro
  * --------------------------------------------------------------- 
  */
+#mobile-title {
+	display: none;
+}
 @media only screen and (max-width:1024px) {
+	.intro-content title {
+		display: none;
+	}
 	.intro-content h1 {
 		font-size: 7.6rem;
 	}
@@ -1452,6 +1458,9 @@ header .logo a {
 @media only screen and (max-width:768px) {
 	#intro {
 		min-height: 660px;
+	}
+	.intro-content title {
+		display: none;
 	}
 	.intro-content h1 {
 		font-size: 5.2rem;
@@ -1472,6 +1481,12 @@ header .logo a {
 @media only screen and (max-width:600px) {
 	#intro {
 		min-height: 600px;
+	}
+	#typed {
+		display: none;
+	}
+	#mobile-title{
+		display: block;
 	}
 	.intro-content h1 {
 		font-size: 4.6rem;
