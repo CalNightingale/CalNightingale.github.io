@@ -1648,6 +1648,9 @@ header .logo a {
  *
  * ------------------------------------------------------------------- 
  */
+#adobe-dc-view{
+	width: 100%;
+}
 #resume {
 	padding-top: 12rem;
 	padding-bottom: 12rem;
