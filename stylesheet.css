@@ -1,0 +1,211 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    max-width: 600px;
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.headshot-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.headshot {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-top: 15px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+
+/* Resume Section */
+#resume {
+    margin-top: 40px;
+    text-align: center;  /* Ensure the section is centered */
+}
+
+.resume-container {
+    width: 100%;
+    max-width: 900px; /* Ensures the resume is responsive and centered */
+    margin: 0 auto;  /* Center the container itself */
+    text-align: center; /* Aligns content inside the container */
+}
+
+.resume-embed {
+    width: 66vw;  /* Equivalent to 2/3 of the viewport width */
+    max-width: 900px;  /* Ensure it doesn't exceed max width */
+    height: calc(66vw * 11 / 8.5);  /* Maintain the aspect ratio */
+    max-height: calc(900px * 11 / 8.5); /* Ensure the height scales with the max-width */
+    border: 1px solid #ccc;  /* Optional: Add a border */
+    margin: 0 auto;  /* Center the embed element */
+    display: block;  /* Ensures it behaves like a block element */
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+}
+
+.contact-icons {
+    margin-top: 15px;
+    text-align: center;  /* Center the icons horizontally */
+}
+
+/* Contact icons styling */
+.contact-icon {
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #333;      /* Icon color */
+    text-decoration: none;
+    transition: color 0.3s ease;  /* Smooth color transition on hover */
+}
+
+.contact-icon:last-child {
+    margin-right: 0;  /* Remove right margin from the last icon */
+}
+
+/* Remove underline effect for contact icons */
+.contact-icon::after {
+    content: none;
+}
+
+/* Hover effect: change color on hover */
+.contact-icon:hover {
+    color: #0077b5;  /* Default hover color (for LinkedIn) */
+    filter: none;  /* Remove the brightness filter for contact icons */
+}
+
+/* Specific hover colors for each platform */
+.contact-icon[href*="linkedin"]:hover {
+    color: #0077b5;  /* LinkedIn blue */
+}
+
+.contact-icon[href*="github"]:hover {
+    color: #333;     /* GitHub gray */
+}
+
+.contact-icon[href*="mailto"]:hover {
+    color: #d14836;  /* Email red */
+}
+
+.contact-icon[href$=".pdf"]:hover {
+    color: #f40f02;  /* PDF red */
+}
+
+/* Custom URL styling */
+:root {
+    --darken-amount: 70%;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, filter 0.3s ease;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    background-color: currentColor;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+}
+
+a:hover {
+    filter: brightness(var(--darken-amount));
+}
+
+/* Specific link colors */
+a[href*="gradienthealth.io"] {
+    color: #5C4FA1;
+}
+
+a[href*="visual.cs.brown.edu"],
+a[href*="www.brown.edu"] {
+    color: #C00404;
+}
+
+a[href*="atlantic-acm.com"] {
+    color: #107642;
+}
+
+a[href*="n1health.com"] {
+    color: #0077C8;
+}
+
+/* Inline icon styling */
+.inline-icon {
+    width: 16px;  /* or whatever size you prefer */
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 5px;
+}

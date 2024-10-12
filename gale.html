@@ -1,358 +1,78 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
-
+<html lang="en">
 <head>
-
-	<!--- basic page needs
-   ================================================== -->
-	<meta charset="utf-8">
-	<title>Cal Nightingale</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
-
-	<!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-   ================================================== -->
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/vendor.css">
-	<link rel="stylesheet" href="css/titlecursor.css">
-
-	<!-- script
-   ================================================== -->
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
-	<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-	<!-- favicons
-	================================================== -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cal Nightingale</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
-
-<body id="top">
-
-	<!-- header 
-   ================================================== -->
-	<header>
-		<div class="row">
-
-			<div class="top-bar">
-				<a class="menu-toggle" href="#"><span>Menu</span></a>
-				<div id="logo">
-
-				</div>
-				<nav id="main-nav-wrap">
-					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
-						<li><a class="smoothscroll" href="#about" title="">About</a></li>
-						<li><a class="smoothscroll" href="#resume" title="">Resume</a></li>
-						<li><a class="smoothscroll" href="#contact" title="">Contact</a></li>
-					</ul>
-				</nav>
-			</div> <!-- /top-bar -->
-
-		</div> <!-- /row -->
-	</header> <!-- /header -->
-
-	<!-- intro section
-   ================================================== -->
-	<section id="intro">
-
-		<div class="intro-overlay"></div>
-
-		<div class="intro-content">
-			<div class="row">
-
-				<div class="col-twelve">
-
-					<h5>Hello, World.</h5>
-					<h1 id="mobile-title">I'm Cal Nightingale</h1>
-					<span class="title" id="typed"></span>
-					<div id="typed-strings">
-						<p>I'm Cal Nightingale</p>
-					</div>
-					<script id="type-script">
-						var typed = new Typed('#typed', {
-							stringsElement: '#typed-strings',
-							typeSpeed: 100,
-							startDelay: 1000,
-							autoInsertCss: false
-						});
-					</script>
-					<br>
-					<p class="intro-position">
-						<span>Software Developer</span>
-						<span>Data Engineer</span>
-					</p>
-
-					<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
-
-				</div>
-
-			</div>
-		</div> <!-- /intro-content -->
-
-		<ul class="intro-social">
-			<li><a href="https://www.linkedin.com/in/cal-nightingale" target="_blank"><i class="fa fa-linkedin"></i></a>
-			</li>
-			<li><a href="https://www.facebook.com/cal.nightingale" target="_blank"><i class="fa fa-facebook"></i></a>
-			</li>
-			<li><a href="https://github.com/CalNightingale" target="_blank"><i class="fa fa-github"></i></a></li>
-		</ul> <!-- /intro-social -->
-
-	</section> <!-- /intro -->
-
-
-	<!-- about section
-   ================================================== -->
-	<section id="about">
-
-		<div class="row section-intro">
-			<div class="col-twelve">
-
-				<h5>About</h5>
-				<h1>Let me introduce myself.</h1>
-
-
-
-				<div class="intro-info">
-
-					<img src="images/profile-pic.jpg" alt="Profile Picture">
-
-					<p class="lead">I am a senior at Brown University majoring in Computer Science and Applied
-						Mathematics. </p>
-				</div>
-
-			</div>
-		</div> <!-- /section-intro -->
-
-		<div class="row about-content">
-
-			<div class="col-six tab-full">
-
-				<h3>Profile</h3>
-				<p>Outside of work, I can usually be found playing Ultimate. I currently play for Brown
-					<a href="https://www.brown.edu/Athletics/Mens_Ultimate/index.html" target="_blank">Brownian
-						Motion</a>,
-					which took fifth at College Nationals this past May. I enjoy a
-					good book, and the Shawshank Redemption is my favorite movie.
-					I am also an avid Duke Basketball fan!
-				</p>
-
-				<ul class="info-list">
-					<li>
-						<strong>Education:</strong>
-						<span>Brown University 2019-Present</span>
-						<span>Jordan High School 2015-2019</span>
-					</li>
-					<li>
-						<strong>Work Experience:</strong>
-						<span>Summer Analyst, <a href=https://www.atlantic-acm.com target="_blank">Atlantic-ACM</a></span>
-						<span>Softare Engineering Intern, <a href=https://www.n1health.com target="_blank">N1 Health</a></span>
-						<span>Research Assistant, <a
-								href=http://sanitation.pratt.duke.edu/onsite-treatment/about-onsite-treatment-project target="_blank">Duke
-								University ADPL Project</a></span>
-					</li>
-					<li>
-						<strong>Interests:</strong>
-						<span>Mathematical Modeling</span>
-						<span>Machine Learning</span>
-						<span>Optimization</span>
-						<span>Graphics</span>
-					</li>
-
-				</ul> <!-- /info-list -->
-
-			</div>
-
-			<div class="col-six tab-full">
-
-				<h3>Skills</h3>
-				<p>I have worked extensively in data ingestion and processing, and am a capable data
-					analyst as well. I plan on exploring topics like machine learning, cybersecurity
-					and algorithmic game theory in the near future.
-				</p>
-				<ul class="skill-bars">
-					<li>
-						<div class="progress percent100"><span>100%</span></div>
-						<strong>Python</strong>
-					</li>
-					<li>
-						<div class="progress percent85"><span>85%</span></div>
-						<strong>Java</strong>
-					</li>
-					<li>
-						<div class="progress percent85"><span>85%</span></div>
-						<strong>HTML</strong>
-					</li>
-					<li>
-						<div class="progress percent95"><span>95%</span></div>
-						<strong>SQL</strong>
-					</li>
-					<li>
-
-						<div class="progress percent75"><span>75%</span></div>
-						<strong>C</strong>
-					</li>
-
-				</ul> <!-- /skill-bars -->
-
-			</div>
-
-		</div>
-
-		<div class="row button-section">
-			<div class="col-twelve">
-				<a href="#contact" title="Contact Me" class="button stroke smoothscroll">Contact Me</a>
-				<a href="resume.pdf" title="Download Resume" class="button button-primary" download>Download Resume</a>
-			</div>
-		</div>
-
-	</section> <!-- /process-->
-
-
-	<!-- resume Section
-   ================================================== -->
-	<section id="resume" class="grey-section">
-
-		<div class="row section-intro">
-			<div class="col-twelve">
-
-				<h5>Resume</h5>
-				<h1>More of my credentials.</h1>
-
-			</div>
-			<!-- Resume -->
-			<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/CalNightingale/CalNightingale.github.io/main/resume.pdf&embedded=true" style="width:100%; height:900px;" frameborder="0"></iframe>
-		</div> <!-- /section-intro-->
-
-
-
-	</section> <!-- /features -->
-
-
-
-
-
-	<!-- contact
-   ================================================== -->
-	<section id="contact">
-
-		<div class="row section-intro">
-			<div class="col-twelve">
-
-				<h5>Contact</h5>
-				<h1>I'd Love To Hear From You.</h1>
-
-			</div>
-		</div> <!-- /section-intro -->
-
-
-
-		<div class="row contact-info">
-
-			<div class="col-four tab-full">
-
-				<div class="icon">
-					<i class="icon-pin"></i>
-				</div>
-
-				<h5>Where to find me</h5>
-
-				<p>
-					69 Brown St, Mail #2728<br>
-					Providence, RI, 02912<br>
-				</p>
-
-			</div>
-
-			<div class="col-four tab-full collapse">
-
-				<div class="icon">
-					<i class="icon-mail"></i>
-				</div>
-
-				<h5>Email Me At</h5>
-
-				<p>cal_nightingale@brown.edu<br>
-					cal.nightingale@gmail.com
-				</p>
-
-			</div>
-
-			<div class="col-four tab-full">
-
-				<div class="icon">
-					<i class="icon-phone"></i>
-				</div>
-
-				<h5>Call Me At</h5>
-
-				<p>(+919) 797 4409<br>
-				</p>
-
-			</div>
-
-		</div> <!-- /contact-info -->
-
-	</section> <!-- /contact -->
-
-
-	<!-- footer
-   ================================================== -->
-
-	<footer>
-		<div class="row">
-
-			<div class="col-six tab-full pull-right social">
-
-				<ul class="footer-social">
-					<li><a href="https://www.linkedin.com/in/cal-nightingale" target="_blank"><i
-								class="fa fa-linkedin"></i></a></li>
-					<li><a href="https://www.facebook.com/cal.nightingale" target="_blank"><i
-								class="fa fa-facebook"></i></a></li>
-					<li><a href="https://github.com/CalNightingale" target="_blank"><i class="fa fa-github"></i></a>
-					</li>
-				</ul>
-
-			</div>
-
-			<div class="col-six tab-full">
-				<div class="copyright">
-					<span>© Copyright Cal Nightingale 2022.</span>
-					<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
-				</div>
-			</div>
-
-			<div id="go-top">
-				<a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-			</div>
-
-		</div> <!-- /row -->
-	</footer>
-
-	<div id="preloader">
-		<div id="loader"></div>
-	</div>
-
-	<!-- Java Script
-   ================================================== -->
-	<script src="js/jquery-2.1.3.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/main.js"></script>
-
+<body>
+    <header>
+        <h1>Cal Nightingale</h1>
+    </header>
+
+    <div class="card-container">
+        <div class="card headshot-card">
+            <img src="headshot.jpg" alt="Cal Nightingale" class="headshot">
+        </div>
+
+        <div class="card">
+            <h2>Currently</h2>
+            <p>Software Engineer<br>
+               @ <a href="https://gradienthealth.io/" target="_blank">Gradient Health</a> <img src="https://gradienthealth.io/favicon.ico" alt="Gradient Health Logo" class="inline-icon"></p>
+        </div>
+
+        <div class="card">
+            <h2>Recently</h2>
+            <p>Research Assistant<br>
+               @ <a href="https://visual.cs.brown.edu/" target="_blank">Brown Visual Computing</a> <img src="https://cs.brown.edu/favicon.ico" alt="Brown CS Logo" class="inline-icon"></p>
+            <p>Summer Analyst<br>
+               @ <a href="https://www.atlantic-acm.com/" target="_blank">Atlantic ACM</a> <img src="https://www.atlantic-acm.com/wp-content/uploads/2023/03/cropped-logo-light-180x180.png" alt="Atlantic ACM Logo" class="inline-icon"></p>
+            <p>Software Engineer<br>
+               @ <a href="https://www.n1health.com/" target="_blank">N1 Health</a> <img src="https://n1health.com//wp-content/uploads/2022/08/favicon-300x300.png" alt="N1 Health Logo" class="inline-icon"></p>
+        </div>
+
+        <div class="card">
+            <h2>Education</h2>
+            <p>Computer Science & Applied Math<br>
+               @ <a href="https://www.brown.edu/" target="_blank">Brown University</a> <img src="https://www.brown.edu/favicon.ico" alt="Brown University Logo" class="inline-icon"></p>
+        </div>
+
+        <div class="card">
+            <h2>Contact</h2>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/cal-nightingale/" target="_blank" class="contact-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/CalNightingale" target="_blank" class="contact-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:cal_nightingale@alumni.brown.edu" class="contact-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="resume.pdf" download class="contact-icon" title="Download Resume">
+                    <i class="fas fa-file-alt"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="resume-container">
+            <embed src="resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" type="application/pdf" class="resume-embed" />
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
 </body>
-
 </html>
