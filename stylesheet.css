@@ -51,7 +51,7 @@ header h1 {
     align-items: center;
     gap: 20px;
     margin: 20px 0;
-    max-width: 600px;
+    max-width: 800px; /* Increased from 600px */
     width: 100%;
     position: relative;
     z-index: 1;  /* Ensure cards are above the overlay */
@@ -86,6 +86,37 @@ header h1 {
 .intro-card h1 {
     margin: 0;
     padding: 0;
+    margin-bottom: 20px;
+}
+
+.currently-sub-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.currently-sub-card h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.currently-sub-card p {
+    color: #fff;
+    margin: 0;
+}
+
+.currently-sub-card a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.currently-sub-card .inline-icon {
+    filter: brightness(0) invert(1);
 }
 
 .card-icon {
@@ -247,4 +278,42 @@ a[href*="n1health.com"] {
 .headshot-card,
 .name-card {
     display: none;
+}
+
+.recently-card {
+    padding-bottom: 10px;
+}
+
+.sub-card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.sub-card {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.sub-card:hover {
+    transform: translateY(-3px);
+}
+
+.sub-card p {
+    margin: 5px 0;
+}
+
+.sub-card p:first-child {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .sub-card-container {
+        flex-direction: column;
+    }
 }
