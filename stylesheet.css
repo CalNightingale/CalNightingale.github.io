@@ -282,6 +282,23 @@ a[href*="n1health.com"] {
 .sub-card.n1health::before {
     background-image: url('https://n1health.com//wp-content/uploads/2022/08/favicon-300x300.png');
 }
+.sub-card.small-subway {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+}
+.sub-card.filmsplice {
+    background-color: #ece4d8;
+}
+.sub-card.voxel {
+    position: relative;
+    overflow: hidden;
+    background-image: repeating-linear-gradient(
+        45deg,
+        #2ecc71,  /* Light green */
+        #2ecc71 10px,
+        #27ae60 10px,  /* Dark green */
+        #27ae60 20px
+    );
+}
 
 .footer-card {
     background-color: #333;
