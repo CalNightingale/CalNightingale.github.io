@@ -242,6 +242,8 @@ a[href*="n1health.com"] {
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
 .sub-card:hover {
@@ -250,12 +252,35 @@ a[href*="n1health.com"] {
 
 .sub-card p {
     margin: 5px 0;
+    position: relative;
+    z-index: 2;
 }
 
-@media (max-width: 600px) {
-    .sub-card-container {
-        flex-direction: column;
-    }
+.sub-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: sepia(100%) saturate(300%) brightness(70%) hue-rotate(350deg) opacity(7%);
+    z-index: 1;
+}
+
+.sub-card.brown::before {
+    background-image: url('https://cs.brown.edu/favicon.ico');
+}
+
+.sub-card.atlantic-acm::before {
+    background-image: url('https://www.atlantic-acm.com/wp-content/uploads/2023/03/cropped-logo-light-180x180.png');
+}
+
+.sub-card.n1health::before {
+    background-image: url('https://n1health.com//wp-content/uploads/2022/08/favicon-300x300.png');
 }
 
 .footer-card {
