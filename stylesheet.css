@@ -272,7 +272,7 @@ a[href*="n1health.com"] {
 }
 
 .sub-card.brown::before {
-    background-image: url('https://cs.brown.edu/favicon.ico');
+    background-image: url('assets/brown_logo.png');
 }
 
 .sub-card.atlantic-acm::before {
