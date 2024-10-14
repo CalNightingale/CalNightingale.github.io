@@ -15,7 +15,8 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding: 20px 20px 0 20px; /* Remove bottom padding */
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,19 +52,48 @@ header h1 {
     align-items: center;
     gap: 20px;
     margin: 20px 0;
-    max-width: 800px; /* Increased from 600px */
+    max-width: 800px;
     width: 100%;
     position: relative;
-    z-index: 1;  /* Ensure cards are above the overlay */
+    z-index: 1;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.9);  /* Slightly transparent white */
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 100%;
     text-align: center;
+}
+
+.resume-card {
+    padding: 20px 0; /* Reduce vertical padding */
+}
+
+.resume-card h2 {
+    margin-bottom: 15px;
+}
+
+.resume-container {
+    width: 100%;
+    max-width: 100%; /* Ensure it fits within the card */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resume-embed {
+    width: 100%; /* Full width of the container */
+    height: calc(100% * 11 / 8.5); /* Maintain the aspect ratio */
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .resume-embed {
+        height: calc(100vw * 11 / 8.5); /* Adjust height for smaller screens */
+    }
 }
 
 .intro-card {
@@ -88,9 +118,22 @@ header h1 {
     padding: 0;
 }
 
+.intro-card .sub-card {
+    background-color: rgba(51, 51, 51, 0.7); /* Dark background with some transparency */
+}
+
+.intro-card .sub-card .job-title {
+    color: white;
+    font-weight: bold;
+}
+
+.intro-card .sub-card .at-symbol {
+    color: white;
+    font-weight: normal;
+}
+
 .card-icon {
     width: 60px;
-    height: 60px;
     object-fit: contain;
     margin-top: 15px;
 }
@@ -102,41 +145,6 @@ header h1 {
 
 .card p {
     color: #666;
-}
-
-/* Resume Section */
-#resume {
-    margin-top: 40px;
-    text-align: center;
-    position: relative;
-    z-index: 1;  /* Ensure resume is above the overlay */
-}
-
-.resume-container {
-    width: 100%;
-    max-width: 900px; /* Ensures the resume is responsive and centered */
-    margin: 0 auto;  /* Center the container itself */
-    text-align: center; /* Aligns content inside the container */
-}
-
-.resume-embed {
-    width: 66vw;  /* Equivalent to 2/3 of the viewport width */
-    max-width: 900px;  /* Ensure it doesn't exceed max width */
-    height: calc(66vw * 11 / 8.5);  /* Maintain the aspect ratio */
-    max-height: calc(900px * 11 / 8.5); /* Ensure the height scales with the max-width */
-    border: 1px solid #ccc;  /* Optional: Add a border */
-    margin: 0 auto;  /* Center the embed element */
-    display: block;  /* Ensures it behaves like a block element */
-}
-
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    width: 100%;
 }
 
 .contact-icons {
@@ -242,13 +250,6 @@ a[href*="n1health.com"] {
     margin-left: 5px;
 }
 
-/* Remove these styles as they're no longer needed */
-.combined-card,
-.headshot-card,
-.name-card {
-    display: none;
-}
-
 .recently-card {
     padding-bottom: 10px;
 }
@@ -281,4 +282,13 @@ a[href*="n1health.com"] {
     .sub-card-container {
         flex-direction: column;
     }
+}
+
+.footer-card {
+    background-color: #333;
+    color: #fff;
+}
+
+.footer-card p {
+    margin: 0;
 }
