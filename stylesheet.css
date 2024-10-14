@@ -67,28 +67,15 @@ header h1 {
     text-align: center;
 }
 
-.resume-card {
-    padding: 20px 0; /* Reduce vertical padding */
-}
-
-.resume-card h2 {
-    margin-bottom: 15px;
-}
-
-.resume-container {
-    width: 100%;
-    max-width: 100%; /* Ensure it fits within the card */
-    margin: 0 auto;
-    text-align: center;
-}
-
 .resume-embed {
-    width: 100%; /* Full width of the container */
-    height: calc(100% * 11 / 8.5); /* Maintain the aspect ratio */
+    width: 100%;
+    height: auto;
+    aspect-ratio: 8.5 / 11;
     border: 1px solid #ccc;
     margin: 0 auto;
     display: block;
 }
+
 
 @media (max-width: 600px) {
     .resume-embed {
