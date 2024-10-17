@@ -106,37 +106,30 @@ body::before {
     transform-origin: bottom;
 }
 
-/* Animation for card border lines */
-@keyframes drawBorder {
-    25% {
-        transform: scaleX(1);
-    }
-    50% {
-        transform: scaleY(1);
-    }
-    75% {
-        transform: scaleX(1);
-    }
-    100% {
-        transform: scaleY(1);
-    }
+/* Updated animation for card border lines */
+@keyframes drawBorderX {
+    to { transform: scaleX(1); }
+}
+
+@keyframes drawBorderY {
+    to { transform: scaleY(1); }
 }
 
 /* Apply animation to card on hover */
 .card:hover::before {
-    animation: drawBorder 2s linear forwards;
+    animation: drawBorderX var(--top-bottom-duration) ease-in forwards;
 }
 
 .card:hover::after {
-    animation: drawBorder 2s 0.5s linear forwards;
+    animation: drawBorderY var(--left-right-duration) var(--right-delay) linear forwards;
 }
 
 .card:hover > :first-child::before {
-    animation: drawBorder 2s 1s linear forwards;
+    animation: drawBorderX var(--top-bottom-duration) var(--bottom-delay) linear forwards;
 }
 
 .card:hover > :first-child::after {
-    animation: drawBorder 2s 1.5s linear forwards;
+    animation: drawBorderY var(--left-right-duration) var(--left-delay) ease-out forwards;
 }
 
 .resume-embed {
