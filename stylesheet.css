@@ -303,6 +303,7 @@ a[href*="n1health.com"] {
 .footer-card {
     background-color: #333;
     color: #fff;
+    margin-bottom: 20px; /* Add this line */
 }
 
 .footer-card p {
