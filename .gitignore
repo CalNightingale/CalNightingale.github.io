@@ -1,0 +1,11 @@
+# Compiled resume — built by CI and published to GitHub Pages, never committed
+resume.pdf
+resume/resume.pdf
+
+# LaTeX build artifacts
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.fls
+resume/*.fdb_latexmk
+resume/*.synctex.gz

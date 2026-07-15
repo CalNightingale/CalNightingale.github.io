@@ -1,0 +1,53 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Permissions required to deploy to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; cancel in-progress runs superseded by a newer push
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: resume
+          root_file: resume.tex
+
+      - name: Assemble site
+        run: |
+          # Publish the compiled PDF at the site root where gale.html expects it
+          cp resume/resume.pdf resume.pdf
+          # Keep LaTeX source and CI config out of the published site
+          rm -rf resume .github .git
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
