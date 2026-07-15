@@ -8,9 +8,12 @@
 \subsection{{Software Engineer \hfill August 2024 — Present}}
 \subtext{Gradient Health \hfill Durham, NC}
 \begin{zitemize}
-\item Designed \& Implemented Cloud Optimized DICOM library; efficiently ingests DICOMs in many formats (zip, intelerad, etc.), creates series-level tars, and stores them in GCS. Estimated 50\% GCS cost savings. Paper to be submitted to \href{https://joss.theoj.org/}{JOSS} summer 2025
-\item Worked extensively in Apache Beam and GCP Dataflow to create pipelines for ingesting, de-identifying, \& exporting 10s of millions of DICOM studies
-\item Complete ownership of Gradient's automated data ingestion pipeline (design, implementation, deployment), eliminating tedious engineering work by allowing client-facing non-technical colleagues to manage ingestion directly 
+\item Sole owner of Gradient Vault, a cloud-native VNA (vendor-neutral archive) for partner hospitals; drove design, implementation, \& partner coordination from concept to MVP, now piloting with two hospitals ahead of launch
+\item Designed \& built V2 of Gradient's internal DICOM review service end-to-end, replacing a Flask/Sheets/on-VM viewer with a FastAPI + React + OHIF web app; lifted on-time SLA delivery from 85\% to over 98\% and retired the legacy Windows review VMs, saving thousands of dollars/month in cloud cost
+\item Re-platformed the COD de-identification \& export pipeline from Apache Beam/Dataflow to GCP Cloud Batch on spot VMs for a $\sim$10x cost reduction; wrote the design doc, decoupled the component chain from Beam, built the batch runner with targeted retries, \& added OpenTelemetry metrics \& Cloud Monitoring dashboards
+\item Author \& maintainer of \href{https://github.com/gradienthealth/cloud_optimized_dicom}{Cloud Optimized DICOM} (COD) since 2024, the Python library underpinning every Gradient DICOM pipeline; published to PyPI and presented as first author at the \href{https://doi.org/10.26044/ecr2026/C-29538}{European Congress of Radiology (ECR) 2026}
+\item Mentored an intern through an OCR-benchmarking project aimed at improving text-in-image redaction in the de-identification pipeline
+\item Retired Gradient's long-standing custom \texttt{pydicom} forks by upstreaming the needed fixes, simplifying dependency management across the codebase
 \end{zitemize}
 
 %====================
@@ -19,9 +22,8 @@
 \subsection{{Research Assistant — Neurosymbolic AI Scene Synthesis \hfill Fall 2023 — Spring 2024}}
 \subtext{Brown Visual Computing Lab \hfill Providence, RI}
 \begin{zitemize}
-\item Assisted in the creation of a novel Neurosymbolic AI Scene Synthesis model; Paper submitted to SIGGRAPH in 2024
-\item Overhauled a deterministic scene synthesis model to output incremental binary masks of valid object placements
-\item Facilitated self-training of the neurosymbolic model by enabling it to interpret these masks
+\item Contributed to a novel Neurosymbolic AI scene-synthesis model (paper submitted to SIGGRAPH 2024)
+\item Overhauled a deterministic scene-synthesis model to emit incremental binary masks of valid object placements, enabling the neurosymbolic model to self-train by interpreting them
 \end{zitemize}
 
 %====================
@@ -41,12 +43,7 @@
 \subsection{{Software Engineering Intern \hfill Gap Year 2020-21, Summer 2022}}
 \subtext{N1 Health \hfill Boston, MA}
 \begin{zitemize}
-\item Implemented core N1 Data Lake pipeline, 
-standardizing data ingestion process and reducing formatting errors at analysis time by 80\%.
-Automated 
- parsing and cleaning client data into csv, writing to SQLite databases \& parquets, and uploading data to AWS S3
-\item Created utilities to collect and visualize aggregate statistics and run background analysis on parsed client data to expedite downstream data science process, decreasing time to create deliverables by 20\%
-\item Refactored core N1 libraries into distinct python packages, removing tech debt and drastically simplifying code base
+\item Built N1's core Data Lake pipeline (parsing client data into SQLite \& parquet on AWS S3), cutting analysis-time formatting errors by 80\%
 \end{zitemize}
 
 %====================
