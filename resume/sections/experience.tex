@@ -5,15 +5,18 @@
 %====================
 % Gradient
 %====================
-\subsection{{Software Engineer \hfill August 2024 — Present}}
-\subtext{Gradient Health \hfill Durham, NC}
+\subsection{{Gradient Health \hfill Durham, NC}}
+\subtext{Software Engineer II \hfill August 2026 — Present}
 \begin{zitemize}
-\item Sole owner of Gradient Vault, a cloud-native VNA (vendor-neutral archive) for partner hospitals; drove design, implementation, \& partner coordination from concept to MVP, now piloting with two hospitals ahead of launch
-\item Designed \& built V2 of Gradient's internal DICOM review service end-to-end, replacing a Flask/Sheets/on-VM viewer with a FastAPI + React + OHIF web app; lifted on-time SLA delivery from 85\% to over 98\% and retired the legacy Windows review VMs, saving thousands of dollars/month in cloud cost
-\item Re-platformed the COD de-identification \& export pipeline from Apache Beam/Dataflow to GCP Cloud Batch on spot VMs for a $\sim$10x cost reduction; wrote the design doc, decoupled the component chain from Beam, built the batch runner with targeted retries, \& added OpenTelemetry metrics \& Cloud Monitoring dashboards
-\item Author \& maintainer of \href{https://github.com/gradienthealth/cloud_optimized_dicom}{Cloud Optimized DICOM} (COD) since 2024, the Python library underpinning every Gradient DICOM pipeline; published to PyPI and presented as first author at the \href{https://doi.org/10.26044/ecr2026/C-29538}{European Congress of Radiology (ECR) 2026}
-\item Mentored an intern through an OCR-benchmarking project aimed at improving text-in-image redaction in the de-identification pipeline
-\item Retired Gradient's long-standing custom \texttt{pydicom} forks by upstreaming the needed fixes, simplifying dependency management across the codebase
+\item Leading the effort to scale the patient-records pipeline from delivering hundreds of patients to 100k+, including moving delivery onto horizontally scaled Cloud Run jobs, implementing review verdict caching so that one human decision applies to every dataset containing the same value, \& cutting a full redaction pass over $\sim$1B records to an estimated 4 minutes \& under \$5 by rebuilding it as a parallel Python job
+\item Shipped a compliance-required pipeline stage that removes facial features from brain MRI scans before data is released, integrating an open-source imaging tool into production \& adding automated checks that route silent failures to human review
+\item Built \& trained an SVM classifier that predicts each scan's body part from its metadata, replacing a rule-based cleaner that left labels on 8.8M of 106M scans (8\%) that the source data contradicted; backfilled the full dataset with accurate labels
+\end{zitemize}
+\subtext{Software Engineer \hfill August 2024 — August 2026}
+\begin{zitemize}
+\item Sole owner of Gradient Vault, a cloud-hosted medical imaging archive for hospitals; took it from concept to pilots at two hospitals, owning system design, infrastructure-as-code (Pulumi), auth, \& integration with hospital imaging systems
+\item Designed \& built V2 of Gradient's internal data-review web app (FastAPI + React), replacing a legacy Flask/Sheets tool; lifted on-time delivery from 85\% to over 98\% \& retired the dedicated review VMs, saving thousands of dollars/month
+\item Author \& maintainer of \href{https://github.com/gradienthealth/cloud_optimized_dicom}{Cloud Optimized DICOM}, an open-source Python library on \href{https://pypi.org/project/cloud-optimized-dicom/}{PyPI} underpinning all of Gradient's imaging pipelines; first author at \href{https://epos.myesr.org/poster/esr/ecr2026/C-29538}{ECR 2026}; moved its main pipeline from Dataflow to Cloud Batch on spot VMs for a $\sim$10x cost cut
 \end{zitemize}
 
 %====================
