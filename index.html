@@ -1,10 +1,169 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>Redirecting...</title>
-      <meta http-equiv = "refresh" content = "0; url = https://calnight.in/gale" />
-   </head>
-   <body>
-      <p>Redirecting to homepage</p>
-   </body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cal Nightingale — Software Engineer</title>
+    <meta name="description" content="Software engineer at Gradient Health, building medical imaging infrastructure. Brown University, Applied Math & Computer Science.">
+    <link rel="canonical" href="https://calnight.in/">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#141413" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://calnight.in/">
+    <meta property="og:title" content="Cal Nightingale — Software Engineer">
+    <meta property="og:description" content="Software engineer at Gradient Health, building medical imaging infrastructure.">
+    <meta property="og:image" content="https://calnight.in/assets/headshot.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/stylesheet.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Cal Nightingale",
+        "url": "https://calnight.in/",
+        "image": "https://calnight.in/assets/headshot.jpg",
+        "jobTitle": "Software Engineer",
+        "worksFor": { "@type": "Organization", "name": "Gradient Health", "url": "https://gradienthealth.io/" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Brown University" },
+        "sameAs": [
+            "https://github.com/CalNightingale",
+            "https://www.linkedin.com/in/cal-nightingale/"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <main class="page">
+        <header class="intro">
+            <img class="headshot" src="/assets/headshot.webp" alt="Portrait of Cal Nightingale" width="400" height="400">
+            <h1>Cal Nightingale</h1>
+            <p class="lede">
+                Software engineer at <a href="https://gradienthealth.io/">Gradient Health</a>,
+                building medical imaging data infrastructure. Based in Washington, DC.
+            </p>
+            <nav class="links" aria-label="Contact">
+                <a href="mailto:cal_nightingale@alumni.brown.edu">Email</a>
+                <a href="https://github.com/CalNightingale">GitHub</a>
+                <a href="https://www.linkedin.com/in/cal-nightingale/">LinkedIn</a>
+                <a href="/resume.pdf">Resume <span class="muted">PDF</span></a>
+            </nav>
+        </header>
+
+        <section aria-labelledby="now">
+            <h2 id="now">Now</h2>
+            <p class="role">
+                <strong>Gradient Health</strong> · Software Engineer II
+                <span class="muted">· 2024–now</span>
+            </p>
+            <ul class="highlights">
+                <li>
+                    Built <strong>Gradient Vault</strong>, a cloud imaging archive for hospitals,
+                    from concept to pilots at two hospitals as its sole owner.
+                </li>
+                <li>
+                    Rebuilt the internal data-review app (FastAPI + React), lifting on-time
+                    delivery from 85% to over 98%.
+                </li>
+                <li>
+                    Author of <a href="https://github.com/gradienthealth/cloud_optimized_dicom">Cloud Optimized DICOM</a>,
+                    the open-source library under all of Gradient's imaging pipelines; presented at
+                    <a href="https://epos.myesr.org/poster/esr/ecr2026/C-29538">ECR 2026</a>.
+                </li>
+                <li>
+                    Scaling the patient-records pipeline from hundreds of patients to 100k+.
+                </li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="projects">
+            <h2 id="projects">Projects</h2>
+            <ul class="projects">
+                <li class="project">
+                    <span class="project-icon project-icon--hum"><img src="/assets/projects/hum.png" alt="" width="48" height="48"></span>
+                    <div>
+                        <h3><a href="https://humtoday.com/">hum</a></h3>
+                        <p>A daily voice memo with a small circle of friends. On the App Store and the web.</p>
+                        <p class="tags">Flutter · Supabase · TypeScript</p>
+                    </div>
+                </li>
+                <li class="project">
+                    <span class="project-icon project-icon--subway"><img src="/assets/projects/smallsubway.png" alt="" width="48" height="48"></span>
+                    <div>
+                        <h3><a href="https://smallsubway.calnight.in/gale/">Small Subway</a></h3>
+                        <p>A metro-building sim. Passengers route by breadth-first search; trains run on trigonometry.</p>
+                        <p class="tags">TypeScript</p>
+                    </div>
+                </li>
+                <li class="project">
+                    <span class="project-icon project-icon--voxel"><img src="/assets/projects/voxel.png" alt="" width="48" height="48"></span>
+                    <div>
+                        <h3><a href="https://github.com/CalNightingale/voxel-terrain-gen">Voxel Terrain</a></h3>
+                        <p>Minecraft-style terrain from Voronoi biomes and simplex noise, rendered in OpenGL with toon shading.</p>
+                        <p class="tags">C++ · OpenGL</p>
+                    </div>
+                </li>
+                <li class="project">
+                    <span class="project-icon project-icon--film"><img src="/assets/projects/filmsplice.png" alt="" width="48" height="48"></span>
+                    <div>
+                        <h3><a href="https://filmsplice.calnight.in/">Filmsplice</a></h3>
+                        <p>Pulls film from Google Drive, stitches it together, and uploads it to YouTube.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="before">
+            <h2 id="before">Before</h2>
+            <ol class="timeline">
+                <li>
+                    <span class="when">2024</span>
+                    <div>
+                        <strong>B.S. Applied Math &amp; Computer Science</strong>, <a href="https://www.brown.edu/">Brown University</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="when">2023–24</span>
+                    <div>
+                        <strong>Research Assistant</strong>, <a href="https://visual.cs.brown.edu/">Brown Visual Computing</a>
+                        <p>Neurosymbolic scene synthesis; paper submitted to SIGGRAPH 2024.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="when">2020–22</span>
+                    <div>
+                        <strong>Software Engineering Intern</strong>, <a href="https://www.n1health.com/">N1 Health</a>
+                        <p>Built the core data-lake pipeline on AWS, cutting analysis formatting errors by 80%.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section aria-labelledby="ultimate">
+            <h2 id="ultimate">Ultimate</h2>
+            <figure class="photo">
+                <img src="/assets/ultimate.webp" alt="Brown Ultimate players standing arm in arm before a game at College Nationals in Madison" width="1600" height="901" loading="lazy">
+                <figcaption>
+                    Division I ultimate with Brown, 2019–2024: national champions in 2024,
+                    runners-up in 2022, third in 2021.
+                </figcaption>
+            </figure>
+        </section>
+
+        <footer class="footer">
+            <p>© 2026 Cal Nightingale</p>
+        </footer>
+    </main>
+</body>
 </html>

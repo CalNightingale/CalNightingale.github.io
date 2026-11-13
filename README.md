@@ -1,11 +1,15 @@
 # Personal Website
 
-This is my personal website, built with HTML and raw CSS. It is hosted on GitHub Pages.
+My personal website: one hand-written `index.html` and `stylesheet.css`, with no framework or build step,
+hosted on GitHub Pages. It follows the system light/dark preference.
 
-## Features
+`gale.html` only redirects to `/`, so older `calnight.in/gale` links keep working.
 
-- **Responsive Design**: The website is designed to be responsive and accessible on various devices.
-- **Custom Styling**: Uses custom CSS for a clean and modern look.
+## Images
+
+Photos are resized before they are committed; keep each one near the size it is displayed at
+(for example, `cwebp -q 80`). Project icons live in `assets/projects/` rather than being linked
+from each project's site, so they cannot break when those sites change.
 
 ## Resume
 
@@ -15,7 +19,7 @@ The compiled `resume.pdf` is **not** committed — it is built and published by 
 On every push to `main`, [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
 
 1. Compiles `resume/resume.tex` to a PDF.
-2. Copies it to `resume.pdf` at the site root (where `gale.html` embeds it).
+2. Copies it to `resume.pdf` at the site root, where `index.html` links to it.
 3. Deploys the whole site to GitHub Pages.
 
 To edit the resume, change the `.tex` sources and push — the site rebuilds automatically.
